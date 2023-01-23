@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseInfoFragment"
+    android:padding="10dp"
+    android:background="@color/transparentBackground">
+
+    <TextView
+        android:id="@+id/course_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/purple_500"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/course_info_fragment"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/course_info_title"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:text="@string/status" />
+
+    <TextView
+        android:id="@+id/tv_course_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/course_info_title"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/instructor_text"
+        android:maxLines="1"
+        android:paddingBottom="10dp"
+        android:text="@string/course_status" />
+
+    <TextView
+        android:id="@+id/instructor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_text"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:text="@string/instructor"/>
+
+
+    <TextView
+        android:id="@+id/tv_course_instructor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status_text"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/instructor_text"
+        android:text="@string/instructor_info" />
+
+    <TextView
+        android:id="@+id/note_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/share_button"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/course_note"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:id="@+id/tv_course_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/note_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/optional_course_note" />
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:layout_below="@id/tv_course_instructor"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+</RelativeLayout>

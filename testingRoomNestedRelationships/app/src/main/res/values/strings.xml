@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">testingRoomNestedRelationships</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="course_info_fragment">COURSE INFO FRAGMENT</string>
+    <string name="status">Status:</string>
+    <string name="course_status">Course Status</string>
+    <string name="instructor">Instructor: </string>
+    <string name="instructor_info">Instructor Info</string>
+    <string name="course_note">Course Note</string>
+    <string name="optional_course_note">Optional Course Note</string>
+    <string name="assessment_start">Assessment Start</string>
+    <string name="assessment_title">Assessment Title</string>
+    <string name="select_assessment_type">Select Assessment Type</string>
+
+    <string-array name="type_list">
+        <item>Performance</item>
+        <item>Objective</item>
+    </string-array>
+
+    <string-array name="status_list">
+        <item>In Progress</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+        <item>Plan to Take</item>
+    </string-array>
+</resources>

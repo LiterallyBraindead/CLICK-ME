@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssessmentActivity"
+    android:padding="10dp"
+    android:background="@color/transparentBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/start_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/end_text"
+                android:text="Term Start"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+            <TimePicker
+                android:id="@+id/term_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-30dp"
+                android:layout_marginEnd="-30dp"
+                android:scaleX=".8"
+                android:timePickerMode="spinner" />
+
+            <TextView
+                android:id="@+id/end_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/term_start_time"
+                android:text="Term End"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+            <DatePicker
+                android:id="@+id/term_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/term_start_time"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginEnd="-10dp"
+                android:layout_toStartOf="@+id/term_end_time" />
+
+            <TimePicker
+                android:id="@+id/term_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-30dp"
+                android:layout_marginEnd="-30dp"
+                android:layout_toEndOf="@id/term_start_time"
+                android:scaleX=".8"
+                android:timePickerMode="spinner" />
+
+            <DatePicker
+                android:id="@+id/term_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/term_start_date"
+                android:layout_below="@+id/term_end_time"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginEnd="-20dp"
+                android:layout_toEndOf="@id/term_start_time" />
+
+            <TextView
+                android:id="@+id/term_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/term_start_date"
+                android:layout_alignParentStart="true"
+                android:text="Term title"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            <EditText
+                android:id="@+id/edit_term_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/term_end_date"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/term_title"
+                android:hint="Enter title here"
+                android:inputType="text" />
+
+
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_term_title"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="-10dp"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_term_title"
+                android:layout_alignTop="@id/button_save"
+                android:layout_alignBottom="@id/button_save"
+                android:layout_toEndOf="@id/button_save"
+                android:text="Cancel" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

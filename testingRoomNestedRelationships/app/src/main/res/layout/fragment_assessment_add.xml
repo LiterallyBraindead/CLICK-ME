@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssessmentActivity"
+    android:padding="10dp"
+    android:background="@color/transparentBackground">
+    <TextView
+        android:id="@+id/start_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/assessment_end"
+        android:text="@string/assessment_start"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <TimePicker
+        android:id="@+id/start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-30dp"
+        android:layout_marginEnd="-30dp"
+        android:scaleX=".8"
+        android:timePickerMode="spinner" />
+
+    <TextView
+        android:id="@+id/assessment_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/start_time"
+        android:text="Assessment End"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <DatePicker
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_time"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/end_time"
+        android:layout_marginTop="-30dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginEnd="-10dp"/>
+
+    <TimePicker
+        android:id="@+id/end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-30dp"
+        android:layout_marginEnd="-30dp"
+        android:layout_toEndOf="@id/start_time"
+        android:scaleX=".8"
+        android:timePickerMode="spinner" />
+
+    <DatePicker
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/assessment_title"
+        android:layout_below="@+id/end_time"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="-20dp"
+        android:layout_toEndOf="@id/start_time" />
+
+    <TextView
+        android:id="@+id/assessment_type_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_date"
+        android:layout_alignParentStart="true"
+        android:text="@string/select_assessment_type"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Spinner
+        android:id="@+id/assessment_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_date"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/assessment_type_text"
+        android:entries="@array/type_list"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/assessment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assessment_type_text"
+        android:layout_alignParentStart="true"
+        android:text="@string/assessment_title"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <EditText
+        android:id="@+id/title_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assessment_type_text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/assessment_title"
+        android:hint="enter title here"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/assessment_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="-10dp"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_edit"
+        android:layout_alignBottom="@id/button_save"
+        android:layout_toEndOf="@id/button_save"
+        android:text="Cancel" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssessmentActivity"
+    android:padding="10dp"
+    android:background="@color/transparentBackground">
+    <TextView
+        android:id="@+id/start_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/course_end"
+        android:text="Course Start"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <TimePicker
+        android:id="@+id/start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-30dp"
+        android:layout_marginEnd="-30dp"
+        android:scaleX=".8"
+        android:timePickerMode="spinner" />
+
+    <TextView
+        android:id="@+id/course_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/start_time"
+        android:text="Course End"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <DatePicker
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_time"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_toStartOf="@+id/end_time" />
+
+    <TimePicker
+        android:id="@+id/end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-30dp"
+        android:layout_marginEnd="-30dp"
+        android:layout_toEndOf="@id/start_time"
+        android:scaleX=".8"
+        android:timePickerMode="spinner" />
+
+    <DatePicker
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/start_date"
+        android:layout_below="@+id/end_time"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="-20dp"
+        android:layout_toEndOf="@id/start_time" />
+
+    <TextView
+        android:id="@+id/course_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_date"
+        android:layout_alignParentStart="true"
+        android:text="Course title"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <EditText
+        android:id="@+id/title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/end_date"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/course_title"
+        android:hint="Enter title here"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/instructor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_edit"
+        android:layout_alignParentStart="true"
+        android:text="Select Instructor"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Spinner
+        android:id="@+id/spinner_instructor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_edit"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/instructor_text"
+        android:textAlignment="center"
+        android:paddingBottom="20dp" />
+    <TextView
+        android:id="@+id/optional_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_instructor"
+        android:layout_alignParentStart="true"
+        android:text="Optional Note"
+        android:textAppearance="@style/TextAppearance.AppCompat"/>
+    <EditText
+        android:id="@+id/edit_optional_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_instructor"
+        android:layout_toEndOf="@id/optional_note"
+        android:layout_alignParentEnd="true"
+        android:hint="Optional note here"/>
+
+    <TextView
+        android:id="@+id/course_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_optional_note"
+        android:layout_alignParentStart="true"
+        android:text="Course Status"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Spinner
+        android:id="@+id/spinner_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_optional_note"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/course_status"
+        android:entries="@array/status_list"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_status"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="-10dp"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_status"
+        android:layout_alignTop="@id/button_save"
+        android:layout_alignBottom="@id/button_save"
+        android:layout_toEndOf="@id/button_save"
+        android:text="Cancel" />
+
+
+
+
+</RelativeLayout>
